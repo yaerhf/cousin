@@ -571,9 +571,10 @@ c("Image load error"):b()};a.addEventListener("load",d);a.addEventListener("erro
                 qrscandiv.style.display = 'flex';
                 return new Promise((resolve)=>{
                     qrScanner = new QrScanner(qrcodescanner,(code)=>{
-                        stopScan();
+                        console.log('code found', code);
                         resolve(code.trim());
-                    },{highlightScanRegion: true, highlightCodeOutline: true});
+                        stopScan();
+                    },{highlightScanRegion: true});
                     qrScanner.start();
                 })
             }
