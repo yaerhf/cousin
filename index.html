@@ -574,7 +574,7 @@ c("Image load error"):b()};a.addEventListener("load",d);a.addEventListener("erro
                         console.log('code found', code);
                         resolve(code.trim());
                         stopScan();
-                    });
+                    },{highlightScanRegion: true, highlightCodeOutline: true});
                     qrScanner.start();
                 })
             }
